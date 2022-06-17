@@ -1,11 +1,15 @@
 import React from 'react'
-import{BrowserRouter, Switch} from 'react-router-dom'
-import { appRoutes } from './navigation'
+import{BrowserRouter, Switch,Route} from 'react-router-dom'
+import { appRoutes } from "./navigation";
 
 const App = (props) => {
-  let routes = <Switch>{appRoutes()}</Switch>
+  let routes = <Switch>{appRoutes()}</Switch>;
   return (
-    <div><BrowserRouter>{routes}</BrowserRouter></div>
+    <div>
+      {/* <AuthProvider> */}
+        <BrowserRouter>{routes}</BrowserRouter>
+      {/* </AuthProvider> */}
+    </div>
   )
 }
 

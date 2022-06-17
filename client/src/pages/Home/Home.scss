@@ -1,0 +1,121 @@
+$mobile: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.tile {
+    margin-bottom: 1em;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1em 1em;
+  }
+  .tile-01 {
+    background: #0B2E93;
+    // background-image: url(../../../assets/images/tile-03.png);
+    // background-position: 10% 15%;
+    // background-size: 46px;
+    // background-repeat: no-repeat;
+  }
+  .tile-01:hover{
+    background: #153282;
+  }
+  .tile-02 {
+    background: #000C17;
+  }
+  .tile-02:hover{
+    background: #0c2033;
+  }
+  .tile-03 {
+    background: #0B2E93;
+  }
+  .tile-03:hover{
+    background: #153282;
+  }
+  .tile-04 {
+    background: #000C17;
+  }
+  .tile-04:hover{
+    background: #0c2033;
+  }
+  .img-wrapper {
+    // padding: 1em 2em;
+    padding: 1em 2em 0em;
+    img {
+      width: 40px;
+    }
+  }
+  .tile-bar {
+    padding: 1em;
+  }
+  .tile-01-bar {
+    background: #0b2675;
+  }
+  .tile-02-bar {
+    background: #253341;
+  }
+  .tile-03-bar {
+    background: #0b2675;
+  }
+  .tile-04-bar {
+    background: #253341;
+  }
+  .tile-text{
+    color: #fff;
+      font-size: 16px;
+      padding: 0em 1em;
+      text-align: right;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text-content {
+    color: #fff;
+    font-size: 16px;
+    // padding: 1em 1em;
+    padding: 1em 1em 0;
+    text-align: right;
+    .number {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  .tile-wrapper {
+   // justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .Dboard-tb-wrapper {
+    justify-content: space-around;
+    margin-top: 2.5em;
+    .ant-table-thead > tr > th {
+      background: #eeeeee94 !important;
+      color: #000 !important;
+    }
+    .dash-tb {
+      //border: 2px #e2e6e7 solid;
+      margin-bottom: 2.5em;
+    }
+    .chart-icon {
+      padding: 6px 10px 6px 0;
+      font-size: 22px;
+      color: #7267cb !important;
+    }
+    .tb-chart {
+      margin: 0em 7px;
+    }
+    .tb-chart-text{
+        color: #7267cb;
+        font-size: 14px;
+    }
+  }
+  
+  .text-hide{
+    visibility: hidden;
+  }
+  
+  @include mobile {
+      .tile-wrapper{
+          flex-direction: column !important;
+      }
+  }
