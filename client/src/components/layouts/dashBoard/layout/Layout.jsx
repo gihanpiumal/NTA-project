@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <LayoutHeader />
-      <div>layout</div>
+      {/* <div>layout</div> */}
     </>
   );
 };
