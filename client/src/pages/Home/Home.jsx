@@ -23,6 +23,7 @@ class Dashboard extends Component {
     return (
       <>
        {/* <div style={{backgroundColor: "", marginTop: ""}}>hello hello</div> */}
+       <div>HOME</div>
       </>
     );
   }
