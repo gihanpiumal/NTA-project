@@ -1,16 +1,33 @@
-import React from 'react'
-import{BrowserRouter, Switch,Route} from 'react-router-dom'
-import { appRoutes } from "./navigation";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+import { RoutesConstant } from "./assets/constants";
+import { Home, Login, ViewAll } from "./pages";
 
 const App = (props) => {
-  let routes = <Switch>{appRoutes()}</Switch>;
   return (
-    <div>
-      {/* <AuthProvider> */}
-        <BrowserRouter>{routes}</BrowserRouter>
-      {/* </AuthProvider> */}
-    </div>
-  )
-}
+    <Router>
+      <main>
+        <Switch>
+          <Route path={RoutesConstant.login} exact>
+            <Login />
+          </Route>
+          <Route path={RoutesConstant.viewAll} exact>
+            <ViewAll />
+          </Route>
+          <Route path={RoutesConstant.home} exact>
+            <Home />
+          </Route>
+          <Redirect to={RoutesConstant.home} />
+        </Switch>
+      </main>
+    </Router>
+  );
+};
 
-export default App
+export default App;
